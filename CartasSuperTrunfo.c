@@ -9,6 +9,8 @@ struct Carta {
     float area;
     float pib;
     int pontos_turisticos;
+    float densidade_populacional;
+    float pib_per_capita;
 };
 
 int main() {
@@ -32,6 +34,10 @@ int main() {
     scanf("%d", &carta1.pontos_turisticos);
     printf("\n");
 
+    carta1.densidade_populacional = (float)carta1.populacao / carta1.area;
+    carta1.pib_per_capita = carta1.pib / carta1.populacao;
+    printf("\n");
+    
     // Cadastro da segunda carta
     printf("Cadastro da Segunda Carta:\n");
     printf("------------------------\n");
@@ -48,6 +54,11 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &carta2.pontos_turisticos);
     printf("\n");
+
+    carta2.densidade_populacional = (float)carta2.populacao / carta2.area;
+    carta2.pib_per_capita = carta2.pib / carta2.populacao;
+    printf("\n");
+
 
     // Exibição dos dados da primeira carta
     printf("Dados da Primeira Carta:\n");
